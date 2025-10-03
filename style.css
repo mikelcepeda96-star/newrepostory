@@ -1,19 +1,49 @@
 
+/* Fondo general con un color neutro claro y elegante */
 body {
-        background-color:  oklch(97.094% 0.14713 108.043);
-        padding: 16px;
-
+    background-color: oklch(97.094% 0.14713 108.043); /* Puedes dejar este o usar uno más neutro */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 16px;
+    color: #111; /* Texto principal en negro suave */
+    margin: 0;
 }
 
+/* Encabezado principal centrado y con colores del Athletic */
 h1 {
-text-align: center;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-style: normal;
+    text-align: center;
+    font-size: 2.5em;
+    color: #ba0c2f; /* Rojo característico del Athletic Club */
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.imagen_perfil{
-
+/* Imagen de perfil estilo escudo: circular, con borde rojiblanco */
+.imagen_perfil {
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    border: 6px solid #ba0c2f; /* Borde rojo */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    display: block;
+    margin: 0 auto 32px auto; /* Centrado */
+}
+
+/* Opcional: fondo con una ligera textura o gradiente rojiblanco */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        #ffffff,
+        #ffffff 20px,
+        #ba0c2f 20px,
+        #ba0c2f 40px
+    );
+    opacity: 0.05; /* Muy sutil */
+    z-index: -1;
 }
